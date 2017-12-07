@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewprot" content="width=device-width,initial-scale=1">
+	<title>王鹏的简历</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+		
+
+		window.onload = init;
+        function init() {
+        	change_time();
+        	window.setInterval("change_time()",1000);
+        }
+
+        function change_time() {
+        	var t = document.getElementsByClassName("time")[0];
+        	if(t) {
+               var time = new Date();
+               t.innerHTML = time.toLocaleString();
+        	}
+        }
+
+	</script>
+	<style>
+		body{
+			background: url(background.jpg) no-repeat;
+			text-align: center;
+		}
+		div[class *="root"]{
+			height:100%;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0;
+			float:none;
+		}
+		img{ 
+			width: 100%; 
+			height: auto;
+			max-width: 120%; 
+			display: block;
+			border: 1px solid black;
+        }
+        li{
+           width: 100%;
+           background:#d2d2d2;
+           padding:6%;
+           font-size: 200%;
+        }
+        li:hover{
+            background: #eaeaea;
+        }
+
+        *[class*="nav"] {
+        	padding: 0;
+        	margin:0;
+        	float: left;
+        }
+        .bg{
+	        background:#ffffff;
+	        float: left;
+	        padding: 0;
+	        margin:0;9
+        }
+        div[class*="text"]{
+        	float: left;
+        	height: auto;
+        }
+        li[class="active"]{
+        	background: #ffffff;
+        }
+        a{
+        	border:0;
+        	padding: 0;
+        	margin:0;
+        }
+        a[data-toggle="tab"]{
+        	border: 0;
+        }
+        .notice{
+        	font-size: 60%;
+        	margin: 0;
+        	padding: 0;
+        }
+        .time{
+        	margin-top: 1%
+        }
+	</style>
+
+</head>
+<body>
+	<p  class="time">当前时间:</p>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="root col-md-8 col-xs-12 col-sm-10 col-lg-6  " >
+				<div class="bg col-md-12 col-xs-12 col-sm-12 col-lg-12 ">
+					<!--左侧导航-->
+					<div class="nav1 col-md-4 col-xs-3 col-sm-4 col-lg-4">
+						<ul class="nav nav-tabs nav-stacked" >
+							<img calss="img-responsive img-rounded" src="logo.jpg" alt="照片"/>
+							<li class="active" href="#info" data-toggle="tab">info</li>
+							<li href="#exp" data-toggle="tab">exp</li>
+							<li href="#kills" data-toggle="tab">kills</li>
+							<li href="#other" data-toggle="tab">other</li>
+						</ul>
+	                </div>
+	                <!--右侧正文-->
+	                <div class="text col-md-8 col-xs-9 col-sm-8 col-lg-8">
+	                	<div class="tab-pane fade in active" id="info">
+	                		<p>infoinfosfgfg</p>
+	                	</div>
+	                	<div class="tab-pane fade" id="exp">
+	                		expexpexpfgsgsfdgsfdg
+	                	</div>
+	                	<div class="tab-pane fade" id="kills">
+	                		killskillskillssfgsfdg
+	                	</div>
+	                	<div class="tab-pane fade" id="other">
+	                		othersotherssfgsfdgsfg
+	                	</div>                	
+                	</div>
+                </div>
+			</div>
+		</div>	
+	</div>
+	<div class=" col-sm-12 col-md-12 col-xs-12 col-lg-12">
+	<form action="" method="POST" class="form-horizontal" role="form">
+		<div class="btn-group dropup">
+		  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		   购买<span class="caret"></span>
+		   <span class="sr-only"></span>
+		  </button>
+		  <ul class="dropdown-menu notice" >
+		    <li><a href="#">短信通知</a></li>
+		    <li><a href="#">邮箱通知</a></li>
+		  </ul>
+		</div>
+	</form>
+	</div>
+</body>
+</html>
